@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+    {{ new_car_form.as_table }} 
+    </table>
+    <input type="submit" value="cadastrar" class="btn btn-primary">
+</form>
+{% endblock %}
+
+
+<!-- 
+.as_p coloca cada campo do forms em um novo parágrafo
+.as_table coloca cada campo do forms alinhado dentro de uma table
+input do type submit vai dar um post no nosso form para nossa aplicação
+-->
