@@ -1,10 +1,31 @@
-<html>
-    <head>
-        <title>Meus Carros</title>
-    </head>
-    {% block content %}
-        <body>
-            <h3>{{ cars.model }}</h3> 
-        </body>
-    {% endblock %}
-</html>
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="../static/css/cars.css">
+</head>
+
+  <form method="GET" action="{% url 'cars_list' %}">
+    <input type="text" name="search" placeholder="Buscar carro...">
+    <button type="submit">Buscar</button>
+  </form>
+
+  <div class="car-grid">
+    {% if cars %}
+      {% for car in cars %}
+        <div class="car-card">
+        {% if car.photo %}
+            <img src="{{ car.photo.url }}" alt="{{ car.model }} - {{ car.brand }}">
+        {% else %}
+            <img src="{% static 'images/Image_not_available.png' %}" alt="">
+        {% endif %}
+            <h2>{{ car.brand }} {{ car.model }}</h2>
+            <p>{{ car.factory_year }} - R$ {{ car.value }}</p>
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-results">Nenhum carro encontrado.</p>
+    {% endif %}
+  </div>
+{% endblock %}
