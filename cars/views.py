@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect
 from cars.models import Car
 from cars.forms import CarModelForm
 
+
 def cars_view(request):
     cars = Car.objects.all().order_by('brand__name')
     search = request.GET.get('search')
@@ -14,6 +15,7 @@ def cars_view(request):
         'cars.html',
         {'cars': cars }
         )
+
 
 # Função serve tanto para o CarForm qto para o CarModelForm
 def new_car_view(request):
