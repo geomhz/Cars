@@ -41,7 +41,7 @@
 
 .btn {
   display: inline-block;
-  background-color: #0096c7;
+  background-color: #11b0e5;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -57,12 +57,21 @@
 }
 
 .btn-danger {
-  background-color: #d9534f;
+  background-color: #d77471;
   text-decoration: none !important;
 }
 
 .btn-danger:hover {
   background-color: #d2221c;
+}
+
+.btn-back {
+  background-color: #339090;
+  text-decoration: none !important;
+}
+
+.btn-back:hover {
+  background-color: #086666;
 }
 
 .error-message {

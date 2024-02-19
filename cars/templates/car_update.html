@@ -9,15 +9,15 @@
 
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <h1>Editar Carro</h1>
+    <h1>Edit Car</h1>
     <table>
       {{ form.as_table }}
     </table>
     <div>
       <div class="buttons-container">
-        <input type="submit" value="Salvar Alterações" class="btn btn-primary">
-        <a href="{% url 'car_delete' pk=object.pk %}" class="btn btn-danger">Deletar Carro</a>
-        <a href="{% url 'cars_list' %}" class="btn btn-secondary">Cancelar</a>
+        <input type="submit" value="Save Changes" class="btn btn-primary">
+        <a href="{% url 'car_delete' pk=object.pk %}" class="btn btn-danger">Delete Car</a>
+        <a href="{% url 'car_detail' car.pk %}" class="btn btn-secondary">Back</a>
       </div>
     </div>
   </form>

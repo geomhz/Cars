@@ -1,15 +1,30 @@
 {% extends "base.html" %}
-
 {% block content %}
+
+<head>
+    <link rel="stylesheet" href="../../static/css/new_car.css">
+</head>
+
+<div class="register-car-card">
+<h2>Car Register</h2>
+    <div class="container mt-4" style="justify-content: center; display: flex;">
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        <table>
-        {{ form.as_table }} 
-        </table>
-        <input type="submit" value="cadastrar" class="btn btn-primary">
+        <div class="table-responsive">
+            <table class="table">
+                {% for field in form %}
+                <tr>
+                    <td>{{ field.label_tag }}</td>
+                    <td><div class="input-container">{{ field }}</div></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <input type="submit" value="Register" class="btn btn-primary centralize">
     </form>
+</div>
+</div>
 {% endblock %}
-
 
 <!-- 
 .as_p coloca cada campo do forms em um novo parágrafo
