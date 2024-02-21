@@ -3,99 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSLFuWv9KbrRISaFZoXdzqJourMK1rE9iV6B00" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="../../static/css/base.css">
   {% load static %}
-  <title>{% block title %}{% endblock %}</title>
-  <style>
-    body {
-        font-family: 'Open Sans', sans-serif;
-        background-color: #f7f7f7;
-        color: #333;
-        margin: 0;
-        padding: 0;
-    }
+  <title>{% block title %}Simple Car System{% endblock %}</title>
 
-    header {
-        background-color: #0096c7;
-        color: #fff;
-        text-align: center;
-    }
-
-    footer {
-        background-color: #ccc;
-        color: #333;
-        padding: 20px;
-        text-align: center;
-    }
-
-    nav {
-        background-color: #0096c7;
-        color: #fff;
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 0 10px;
-    }
-
-    nav ul li a {
-        color: #fff;
-        text-decoration: none;
-        font-size: 16px;
-        padding: 15px;
-        transition: all 0.3s ease;
-    }
-
-    nav ul li a:hover {
-        background-color: #32bbe8;
-    }
-
-    nav ul li.active a {
-        background-color: #666;
-    }
-
-    nav ul li.active a:hover {
-        background-color: #999;
-    }
-
-    a {
-      text-decoration: none;
-      font-size: 17px;
-    }
-
-    a:hover {
-      font-size: 18px;
-    }
-
-  </style>
 </head>
 <body>
   <header>
     <nav>
       <ul>
         {% if user.is_authenticated %}
-          <li>Olá, {{ user.username }}</li>
-          <li><a href="{% url 'new_car' %}">Cadastrar Carro</a></li>
+          <li>Hello, {{ user.username }}</li>
+          <li><a class="main-btn" href="{% url 'new_car' %}">Car Register</a></li>
         {% endif %}
         
         {% if not user.is_authenticated %}
-          <li><a href="{% url 'register' %}">Cadastre-se</a></li>
-          <li><a href="{% url 'login' %}">Login</a></li>
+          <li><a class="main-btn" href="{% url 'register' %}">Sign Up</a></li>
+          <li><a class="main-btn" href="{% url 'login' %}">Login</a></li>
         {% endif %}
 
-        <li><a href="{% url 'cars_list' %}">Carros</a></li>
+        <li><a class="main-btn" href="{% url 'cars_list' %}">Car List</a></li>
 
         {% if user.is_authenticated %}
-          <li><a href="{% url 'logout' %}">Sair</a></li>
+          <li><a class="main-btn" href="{% url 'logout' %}">Logout</a></li>
         {% endif %}
       </ul>
     </nav>
@@ -106,8 +40,13 @@
     {% endblock %}
   </main>
 
-  <footer>
-    <a href="https://github.com/geomhz/">&copy; 2024 Geo Murata</a>
-  </footer>
+  <div style="align-content: center; text-align: center;">
+    <br>
+      <p> <a href="https://geomurata.com" class="footer-btn" target="_blank">&copy; 2024 Geo Murata Website</a>
+          <a class="fa-brands fa-linkedin btn-social" href="https://www.linkedin.com/in/geovanne-murata/" target="_blank"></a>
+          <a class="fa-brands fa-instagram btn-social" href="https://www.instagram.com/geo.murata/" target="_blank"></a>
+          <a class="fa-brands fa-whatsapp btn-social" href="https://wa.me/5511952842140" target="_blank"></a>
+      <p></p>
+  </div>
 </body>
 </html>
