@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+
+<head>
+    <link rel="stylesheet" href="../../static/css/car_delete.css">
+</head>
+
+<div class="card-delete">
+    <div class="card-header">
+      <h1 class="card-title">Are u sure?</h1>
+    </div>
+    <div class="card-body">
+      <p>Are you sure you want to delete the car:
+        <strong>{{ object.brand }} {{ object.model }}</strong>?</p>
+      <form method="post">
+        {% csrf_token %}
+        <div class="buttons-container">
+          <button type="submit" class="btn btn-danger">Delete Car</button>
+          <a href="{% url 'car_detail' pk=object.pk %}" class="btn btn-secondary">Back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

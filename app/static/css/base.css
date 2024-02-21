@@ -1,0 +1,95 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0096c7;
+    color: #fff;
+    text-align: center;
+}
+
+footer {
+    background-color: #ccc;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #0096c7;
+    color: #fff;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #32bbe8;
+}
+
+nav ul li.active a {
+    background-color: #666;
+}
+
+nav ul li.active a:hover {
+    background-color: #999;
+}
+
+.main-btn {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.main-btn:hover {
+  font-size: 18px;
+}
+
+.footer-btn {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.footer-btn:hover {
+  text-decoration: none;
+  color: rgb(11, 158, 13);
+  font-size: 18px;
+}
+
+.btn-social {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  margin-left: 10px;
+}
+
+.btn-social:hover {
+  text-decoration: none;
+  color: rgb(11, 158, 13);
+  font-size: 24px;
+}

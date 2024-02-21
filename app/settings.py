@@ -74,7 +74,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 ]
 
-LANGUAGE_CODE = 'pt-br' # en-us ou pt-br para linguagem do django-admin
+LANGUAGE_CODE = 'en-us' # en-us ou pt-br para linguagem do django-admin
 
 TIME_ZONE = 'America/Sao_Paulo' # UTC ou America/Sao_Paulo
 
@@ -83,6 +83,11 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'accounts/static'),
+                    os.path.join(BASE_DIR, 'cars/static'),
+                    os.path.join(BASE_DIR, 'app/static'),
+                    ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
