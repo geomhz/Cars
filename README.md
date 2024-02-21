@@ -69,6 +69,11 @@ tzdata==2024.1
 
 ## Usage
 
+You can create a superuser to get acess on /admin/ or just skip this step (you can register as normal user):
+```bash
+python manage.py createsuperuser
+```
+
 To start the system with the command:
 ```bash
 python manage.py runserver
