@@ -1,38 +1,38 @@
-# Sistema de Gerenciamento de Pedidos - Prime Telefonia
+# Car Management System
 
-## Sobre o Projeto
+## About the Project
 
-Este projeto é um simples sistema de cadastro de carros desenvolvido com o framework Django. Ele é projetado para facilitar a organização de cadastro de carros, oferecendo diversas funcionalidades úteis para uma gestão eficiente.
+This project is a simple car registration system developed with the Django framework. It is designed to facilitate the organization of car registration, offering various useful functionalities for efficient management.
 
 ### Funcionalidades
 
-- **Tela de Login:** Autenticação segura para acessar o sistema.
-- **Tela de registro** Cadastro de usuários para acessar o sistema.
-- **Filtro para pesquisa de carros** O filtro facilita a pesquisa de carro por nome/marca.
-- **Create/Read/Update/Delete (CRUD) carros** Para quem está logado é possível adicionar um novo cadastro, ver lista de carros cadastrados, atualizar o cadastro do carro já existente, ou deletar algum carro existente. (CRUD)
-- **Administrador (DJANGO-ADMIN):** Controle e administração de todos os acessos presentes na plataforma.
+- **Login Screen:** Secure authentication to access the system.
+- **Registration Screen:** User registration to access the system.
+- **Car search filter:** The filter makes it easier to search for a car by name/brand.
+- **Create/Read/Update/Delete (CRUD) cars:** For logged-in users, it is possible to add a new registration, see a list of registered cars, update the registration of an existing car, or delete an existing car.
+- **Administrator (DJANGO-ADMIN):** Control and administration of all accesses present on the platform.
 
-## Iniciando
+## Getting Started
 
-Essas instruções vão te ajudar a ter uma cópia do projeto funcionando na sua máquina local para desenvolvimento e teste.
+These instructions will help you get a copy of the project up and running on your local machine for development and testing purposes.
 
-### Pré-requisitos
+### Prerequisites
 
-Instale os seguintes pré-requisitos para rodar o projeto:
+Install the following prerequisites to run the project:
 
-- Python 3.8+ instalado na máquina.
+- Python 3.8+ installed on the machine.
 
-### Instalação
+### Installation
 
-Siga os passos abaixo para configurar o ambiente de desenvolvimento:
+Follow the steps below to set up the development environment:
 
-1. Clone o repositório
+1. Clone the repository
 ```bash
 git clone https://github.com/geomhz/car-store-django.git
 
 ```
 
-1. Crie um ambiente virtual e ative
+1. Create a virtual environment and activate it
 ```bash
 Windows: python -m venv venv
          venv/scripts/activate
@@ -41,22 +41,22 @@ Linux/Mac: python3 -m venv venv
            source venv/bin/activate
 ```
 
-3. Instale as dependências
+3. Install the dependencies
 ```bash
 pip install -r requirements.txt
 ```
-4. Execute as migrações
+4. Execute the migrations
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-5. Inicie o servidor
+5. Start the server
 ```bash
 python manage.py runserver
 ```
 
-### Dependências
+### Dependencies
 
 Lista de dependências do projeto:
 ```bash
@@ -67,53 +67,53 @@ sqlparse==0.4.4
 tzdata==2024.1
 ```
 
-## Uso
+## Usage
 
-Ao iniciar o sistema com o comando:
+To start the system with the command:
 ```bash
 python manage.py runserver
 ```
 
-Abra um navegador e navegue localmente:
+Open a browser and navigate locally:
 ```bash
 http://127.0.0.1:8000/
 ```
 
-Visualize a lista de carros disponíveis sem ter acesso á edições:
-OBS: Ao clicar em cima de alguma imagem de carro da lista disponível você terá acesso aos detalhes do carro.
+View the list of available cars without having access to edits:
+NOTE: By clicking on any car image from the available list, you will have access to the car's details.
 ```bash
 http://127.0.0.1:8000/cars/
 ```
 
-Cadastre-se no sistema para conseguir ter acesso ao CRUD (CREATE, READ, UPDATE E DELETE):
+Sign-up in the system to gain access to CRUD (CREATE, READ, UPDATE, and DELETE):
 ```bash
 http://127.0.0.1:8000/register/
 ```
 
-Faça login para conseguir acessar o sistema:
+Log in to access the system:
 ```bash
 http://127.0.0.1:8000/login/
 ```
 
-Após o login com a nova conta criada você terá acesso á edições do carro ao clicar na imagem de algum carro.
+After logging in with the new account created, you will have access to car edits by clicking on the image of any car.
 ```bash
 http://127.0.0.1:8000/cars/
 ```
 
-Registre um novo carro. As imagens de upload serão adicionadas automaticamente á pasta "media" localizada na raiz do projeto!
+Register a new car. The upload images will be automatically added to the "media" folder located at the root of the project!
 ```bash
 http://127.0.0.1:8000/new_car/
 ```
 
-Pronto! Agora que sabe navegar no sistema já pode explorar!!
+There you go! Now that you know how to navigate the system, you can start exploring!!
 
-## Contato
-Meu nome é Geovanne Murata!
+## Contact
+My name is Geovanne Murata!
 
-Website - [Acesse meu website!](https://geomurata.com/)
+Website - [Visit my website!](https://geomurata.com/)
 
-Linked In - [Acesse meu LinkedIn!](https://www.linkedin.com/in/geovanne-murata/)
+Linked In - [Visit my LinkedIn!](https://www.linkedin.com/in/geovanne-murata/)
 
-WhatsApp - [Me envie uma mensagem no WhatsApp!](https://api.whatsapp.com/send/?phone=5511952842140)
+WhatsApp - [Text me on WhatsApp!](https://api.whatsapp.com/send/?phone=5511952842140)
 
-Link do Projeto: [car-store-django](https://github.com/geomhz/car-store-django/)
+Project Link: [car-store-django](https://github.com/geomhz/car-store-django/)
