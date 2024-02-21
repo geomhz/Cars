@@ -7,8 +7,8 @@
 </head>
 
 <form method="GET" action="{% url 'cars_list' %}">
-  <input type="text" name="search" placeholder="Buscar carro...">
-  <button type="submit">Buscar</button>
+  <input type="text" name="search" placeholder="Find car...">
+  <button type="submit">Search</button>
 </form>
 
 <div class="car-grid">
@@ -23,7 +23,7 @@
       </a>
     {% endfor %}
   {% else %}
-    <p class="no-results">Nenhum carro encontrado.</p>
+    <p class="no-results">No cars found.</p>
   {% endif %}
 </div>
 {% endblock %}
