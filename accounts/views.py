@@ -16,7 +16,6 @@ def register_view(request):
 
 def login_view(request):
     if request.method == 'POST':
-        # Inicializa o formulário com os dados do POST
         login_form = AuthenticationForm(request, data=request.POST)
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -25,7 +24,6 @@ def login_view(request):
             login(request, user)
             return redirect('cars_list')
         else:
-            # Não é mais necessário recriar o login_form aqui, pois já foi criado acima com os dados de POST
             pass
     else:
         login_form = AuthenticationForm()

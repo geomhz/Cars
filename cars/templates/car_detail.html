@@ -17,9 +17,9 @@
 </div>
 <div class="buttons-container">
 {% if user.is_authenticated %}
-  <a href="{% url 'car_update' pk=object.pk %}" class="btn btn-primary">Editar</a>
-  <a href="{% url 'car_delete' pk=object.pk %}" class="btn btn-danger">Deletar</a>
+  <a href="{% url 'car_update' pk=object.pk %}" class="btn btn-primary">Edit</a>
+  <a href="{% url 'car_delete' pk=object.pk %}" class="btn btn-danger">Delete</a>
 {% endif %}
-  <a href="{% url 'cars_list' %}" class="btn btn-back">Voltar</a>
+  <a href="{% url 'cars_list' %}" class="btn btn-back">Back</a>
 </div>
 {% endblock %}

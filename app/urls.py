@@ -16,7 +16,3 @@ urlpatterns = [
     path('cars/<int:pk>/update', CarUpdateView.as_view(), name='car_update'),
     path('cars/<int:pk>/delete', CarDeleteView.as_view(), name='car_delete'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-'''
-para Class-Based View é preciso importar a classe da views com .as_view()
-'''
